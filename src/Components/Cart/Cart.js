@@ -1,6 +1,6 @@
 function Cart({ cart }) {
   return (
-    <div className="w-full mx-auto">
+    <div className="w-full mx-auto mt-6">
       <div className=" p-10  shadow-lg rounded-lg ">
         <h1 className="text-3xl font-bold text-gray-800 mb-4">Cart</h1>
         <ul className="divide-y divide-gray-200">

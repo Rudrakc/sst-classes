@@ -1,12 +1,16 @@
 // import "./ProductCard.css";
+import { useState } from "react";
 import AddToCart from "../AddToCart/AddToCart.js";
-import { useRef } from "react";
 
 function ProductCard({ product }) {
+  const [imgCount, setImgCount] = useState(0);
+  function imgCountInc() {
+    setImgCount((count) => count+1);
+  }
   return (
-    <div className=" my-6 flex w-[70%] items-center justify-between   p-10 shadow-lg rounded-lg gap-4">
+    <div className=" my-6 flex w-[70%] items-center justify-between p-10 shadow-lg rounded-lg gap-4">
       <div className="">
-        <img src={product.images[0]} className="w-1/2 object-contain "></img>
+        <img src={product.images[imgCount]} className="w-1/2 object-contain " onClick={imgCountInc}></img>
       </div>
       <div className="flex flex-col w-full items-center">
         <div>
