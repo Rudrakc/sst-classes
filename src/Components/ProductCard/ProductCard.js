@@ -5,10 +5,10 @@ import AddToCart from "../AddToCart/AddToCart.js";
 function ProductCard({ product }) {
   const [imgCount, setImgCount] = useState(0);
   function imgCountInc() {
-    setImgCount((count) => count+1);
+    setImgCount((count) => (count+1)%product.images.length);
   }
   return (
-    <div className=" my-6 flex w-[70%] items-center justify-between p-10 shadow-lg rounded-lg gap-4">
+    <div className=" flex w-[30%] items-center justify-between p-10 shadow-lg rounded-lg gap-4">
       <div className="">
         <img src={product.images[imgCount]} className="w-1/2 object-contain " onClick={imgCountInc}></img>
       </div>
